@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <p> Address: <%= @restaurant.address %> </p>
+  <p> Category: <%= @restaurant.category.capitalize %> </p>
+  <p> Phone: <%= @restaurant.phone_number ? @restaurant.phone_number : "Google it!" %> </p>
+
+  <p><%= link_to 'Add a review', new_restaurant_review_path(@restaurant) %></p>
+  <p><%= link_to 'Home', restaurants_path %></p>
+</div>
